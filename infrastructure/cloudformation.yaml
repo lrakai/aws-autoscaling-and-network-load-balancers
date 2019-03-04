@@ -101,7 +101,7 @@ Resources:
                   - "iam:CreateServiceLinkedRole"
                 Resource: "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing*"
                 Condition: 
-                  StringLike":
+                  StringLike:
                     iam:AWSServiceName: "elasticloadbalancing.amazonaws.com"
               - Effect: "Allow"
                 Action: 
