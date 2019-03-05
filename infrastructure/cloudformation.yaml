@@ -101,6 +101,17 @@ Resources:
                 Action: 
                   - "iam:PutRolePolicy"
                 Resource: "arn:aws:iam::*:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing*"
+              - Effect: "Allow"
+                Action: 
+                  - "iam:CreateServiceLinkedRole"
+                Resource: "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
+                Condition: 
+                  StringLike:
+                    iam:AWSServiceName: "autoscaling.amazonaws.com"
+              - Effect: "Allow"
+                Action: 
+                  - "iam:PutRolePolicy"
+                Resource: "arn:aws:iam::*:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling*"
               - Effect: "Deny"
                 Action: 
                   - "ec2:*Host*"
