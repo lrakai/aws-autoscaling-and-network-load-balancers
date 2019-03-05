@@ -80,10 +80,6 @@ Resources:
                   - "arn:aws:ec2:us-west-2:*:vpc/*"
               - Effect: "Allow"
                 Action: 
-                  - "iam:ListUsers"
-                Resource: "*"
-              - Effect: "Allow"
-                Action: 
                   - "elasticloadbalancing:*"
                   - "autoscaling:*"
                   - "cloudwatch:*"
@@ -91,10 +87,8 @@ Resources:
                   - "SNS:CreateTopic"
                   - "SNS:Subscribe"
                   - "SNS:ListSubscriptions"
-                Resource: "*"
-              - Effect: "Allow"
-                Action: 
-                  - "elasticloadbalancing:DescribeLoadBalancers"
+                  - "iam:ListUsers"
+                  - "iam:ListRoles"
                 Resource: "*"
               - Effect: "Allow"
                 Action: 
